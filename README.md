@@ -29,3 +29,4 @@ Visit the live website here: [Zoo Website](https://olti2803.github.io/zoo-websit
 ## Contributor
 
 ### Olti Gjoni
+#### GH Username: olti2803
