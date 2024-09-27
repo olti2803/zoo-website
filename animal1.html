@@ -7,6 +7,7 @@
     <title>Animal 1 - African Elephant</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container">
         <a href="index.html" class="logo">My Zoo</a>
@@ -20,16 +21,19 @@
       </div>
     </nav>
 
+    <!-- Header Section -->
     <header>
       <h1>African Elephant</h1>
     </header>
 
+    <!-- Main Content -->
     <main>
+      <!-- Introduction Section -->
       <section>
         <img
           src="images/elephant.jpg"
           alt="African Elephant"
-          style="width: 300px; height: auto"
+          class="feature-image"
         />
         <p>
           The African elephant is the largest land animal on Earth. Known for
@@ -37,8 +41,20 @@
           throughout sub-Saharan Africa. They are known for their intelligence,
           complex social structures, and strong family bonds.
         </p>
+        <button class="btn" onclick="showMoreInfo()">
+          Learn More About Elephants
+        </button>
+        <div id="more-info" style="display: none">
+          <p>
+            Elephants are also known for their remarkable memory and emotional
+            intelligence. They have been observed mourning the death of their
+            herd members and have been seen expressing joy and excitement during
+            reunions.
+          </p>
+        </div>
       </section>
 
+      <!-- Interesting Facts Section -->
       <section>
         <h2>Interesting Facts:</h2>
         <ul>
@@ -51,30 +67,147 @@
             Their ears help them regulate body temperature in the hot African
             climate.
           </li>
+          <li>
+            A single elephant can eat up to 300 pounds of food in a single day!
+          </li>
+          <li>
+            Elephants are excellent swimmers and can use their trunks as
+            snorkels in deep water.
+          </li>
+        </ul>
+        <button class="btn" onclick="toggleFacts()">Show More Facts</button>
+        <ul id="more-facts" style="display: none">
+          <li>
+            Elephants have a gestation period of 22 months, the longest of any
+            land animal.
+          </li>
+          <li>
+            They communicate through infrasound, which can travel several miles.
+          </li>
+          <li>
+            Elephants play a crucial role in their ecosystems by dispersing
+            seeds and creating waterholes used by other animals.
+          </li>
         </ul>
       </section>
 
+      <!-- Habitat Section with Additional Image -->
       <section>
         <h2>Habitat:</h2>
+        <img
+          src="images/elephant-habitat.jpg"
+          alt="Elephant Habitat"
+          class="content-image"
+        />
         <p>
           African elephants are commonly found in diverse habitats such as
           savannas, forests, and deserts. They need vast amounts of land to roam
-          and find enough food and water to survive.
+          and find enough food and water to survive. Elephants play a key role
+          in maintaining the ecosystems they inhabit, helping to shape the
+          environment and support biodiversity.
         </p>
+        <a
+          href="https://en.wikipedia.org/wiki/African_elephant"
+          target="_blank"
+          class="btn"
+          >Read More on Wikipedia</a
+        >
       </section>
 
+      <!-- Behavior Section with Video -->
       <section>
         <h2>Behavior:</h2>
+        <video width="600" controls class="content-video">
+          <source
+            src="https://v.ftcdn.net/01/95/59/70/700_F_195597089_gEELv1PzkC7mPkoa7GtSIxW1N4g1XSO4_ST.mp4"
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
         <p>
           These elephants live in matriarchal herds led by the oldest female.
           They have complex social structures and communicate with each other
-          through a variety of vocalizations and body language.
+          through a variety of vocalizations and body language. Elephants are
+          known for their strong family bonds and collective care of the young.
         </p>
+      </section>
+
+      <!-- Conservation Section -->
+      <section>
+        <h2>Conservation Efforts</h2>
+        <p>
+          African elephants are currently listed as vulnerable due to habitat
+          loss and poaching for their ivory tusks. Numerous organizations are
+          working to protect these majestic creatures and their habitats.
+        </p>
+        <ul>
+          <li>
+            <a href="https://www.savetheelephants.org/" target="_blank"
+              >Save the Elephants</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.worldwildlife.org/species/elephant"
+              target="_blank"
+              >World Wildlife Fund</a
+            >
+          </li>
+          <li>
+            <a href="https://www.elephantswithoutborders.org/" target="_blank"
+              >Elephants Without Borders</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Image Gallery Section -->
+      <section>
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+          <img
+            src="images/elephant1.jpg"
+            alt="Elephant 1"
+            class="gallery-image"
+          />
+          <img
+            src="images/elephant2.jpg"
+            alt="Elephant 2"
+            class="gallery-image"
+          />
+          <img
+            src="images/elephant3.jpg"
+            alt="Elephant 3"
+            class="gallery-image"
+          />
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <a href="index.html">Back to Home</a>
     </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+      function showMoreInfo() {
+        var moreInfo = document.getElementById("more-info");
+        if (moreInfo.style.display === "none") {
+          moreInfo.style.display = "block";
+        } else {
+          moreInfo.style.display = "none";
+        }
+      }
+
+      function toggleFacts() {
+        var moreFacts = document.getElementById("more-facts");
+        if (moreFacts.style.display === "none") {
+          moreFacts.style.display = "block";
+        } else {
+          moreFacts.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

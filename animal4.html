@@ -7,6 +7,7 @@
     <title>Animal 4 - Giant Panda</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container">
         <a href="index.html" class="logo">My Zoo</a>
@@ -20,65 +21,219 @@
       </div>
     </nav>
 
+    <!-- Header Section -->
     <header>
       <h1>Giant Panda</h1>
     </header>
 
+    <!-- Main Content -->
     <main>
+      <!-- Introduction Section -->
       <section>
-        <img
-          src="images/panda.jpg"
-          alt="Giant Panda"
-          style="width: 300px; height: auto"
-        />
+        <img src="images/panda.jpg" alt="Giant Panda" class="feature-image" />
         <p>
-          The giant panda, native to the mountain ranges of central China, is
-          known for its distinctive black-and-white fur. Despite being
-          classified as a carnivore, the giant panda's diet is primarily bamboo,
+          The Giant Panda is native to the mountain ranges of central China and
+          is known for its distinctive black-and-white fur. Despite being
+          classified as a carnivore, the Giant Panda's diet is primarily bamboo,
           making up over 99% of its intake.
         </p>
+        <button class="btn" onclick="showMoreInfo()">
+          Learn More About Pandas
+        </button>
+        <div id="more-info" style="display: none">
+          <p>
+            Pandas play a crucial role in China's bamboo forests by spreading
+            seeds and facilitating the growth of vegetation. They are known for
+            their playful behavior and their gentle nature, making them beloved
+            by people around the world.
+          </p>
+        </div>
       </section>
 
+      <!-- Interesting Facts Section -->
       <section>
         <h2>Interesting Facts:</h2>
         <ul>
           <li>
-            Giant pandas spend up to 14 hours a day eating bamboo to meet their
+            Giant Pandas spend up to 14 hours a day eating bamboo to meet their
             nutritional needs.
+          </li>
+          <li>
+            They have a special adaptation in their wrist bone, known as the
+            “pseudo-thumb,” which helps them grip bamboo stems.
           </li>
           <li>
             Each panda has a unique pattern of black markings on its fur, making
             them identifiable to researchers.
           </li>
           <li>
-            They have a special adaptation in their wrist bone, known as the
-            “pseudo-thumb,” which helps them grip bamboo stems.
+            Pandas can climb trees and swim, although they prefer to stay on the
+            ground.
+          </li>
+        </ul>
+        <button class="btn" onclick="toggleFacts()">Show More Facts</button>
+        <ul id="more-facts" style="display: none">
+          <li>
+            Pandas are solitary animals and have their own territory marked with
+            scent markings and vocalizations.
+          </li>
+          <li>
+            A newborn panda is about the size of a stick of butter and weighs
+            around 100 grams.
+          </li>
+          <li>
+            Pandas can live up to 20 years in the wild and up to 30 years in
+            captivity.
           </li>
         </ul>
       </section>
 
+      <!-- Habitat Section with Additional Image -->
       <section>
         <h2>Habitat:</h2>
+        <img
+          src="images/panda-habitat.jpg"
+          alt="Panda Habitat"
+          class="content-image"
+        />
         <p>
-          Giant pandas are found in the mountainous regions of Sichuan, Shaanxi,
+          Giant Pandas are found in the mountainous regions of Sichuan, Shaanxi,
           and Gansu provinces in China. They thrive in temperate forests with
-          dense bamboo undergrowth and a cool climate.
+          dense bamboo undergrowth and a cool climate. The preservation of these
+          habitats is crucial for the survival of the species.
         </p>
+        <a
+          href="https://en.wikipedia.org/wiki/Giant_panda"
+          target="_blank"
+          class="btn"
+          >Read More on Wikipedia</a
+        >
       </section>
 
+      <!-- Diet Section with Table -->
       <section>
-        <h2>Behavior:</h2>
+        <h2>Diet</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Bamboo</td>
+              <td>Main diet, making up 99% of their food intake.</td>
+            </tr>
+            <tr>
+              <td>Fruits</td>
+              <td>Occasionally eaten when available.</td>
+            </tr>
+            <tr>
+              <td>Insects</td>
+              <td>Sometimes consumed, providing additional protein.</td>
+            </tr>
+            <tr>
+              <td>Small Animals</td>
+              <td>
+                Rarely eaten, but pandas are known to consume small mammals.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Conservation Section -->
+      <section>
+        <h2>Conservation Efforts</h2>
         <p>
-          Giant pandas are generally solitary animals, with males and females
-          coming together only during the breeding season. They communicate with
-          each other through vocalizations and scent markings. Despite their
-          cuddly appearance, they can be as dangerous as any other bear species.
+          The Giant Panda was once considered critically endangered, but thanks
+          to extensive conservation efforts, its status has improved to
+          vulnerable. Conservation organizations and the Chinese government
+          continue to work to protect pandas and their habitats.
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.worldwildlife.org/species/giant-panda"
+              target="_blank"
+              >World Wildlife Fund</a
+            >
+          </li>
+          <li>
+            <a href="https://www.pandasinternational.org/" target="_blank"
+              >Pandas International</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.smithsonianmag.com/smart-news/giant-pandas-are-no-longer-endangered-180978393/"
+              target="_blank"
+              >Smithsonian Magazine: Panda Conservation</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Video Section -->
+      <section>
+        <h2>Giant Panda in Action</h2>
+        <video width="600" controls class="content-video">
+          <source
+            src="https://media.istockphoto.com/id/1468416054/video/giant-panda-eating-bamboo-leaves-china.mp4?s=mp4-640x640-is&k=20&c=VXbXWmSkZRILvcHEDJPu7bEkX19IOBsGNpYbQz0EOjs="
+            type="video/mp4"
+          />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <!-- Image Gallery Section -->
+      <section>
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+          <img
+            src="images/panda1.jpg"
+            alt="Giant Panda 1"
+            class="gallery-image"
+          />
+          <img
+            src="images/panda2.jpg"
+            alt="Giant Panda 2"
+            class="gallery-image"
+          />
+          <img
+            src="images/panda3.jpg"
+            alt="Giant Panda 3"
+            class="gallery-image"
+          />
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <a href="index.html">Back to Home</a>
     </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+      function showMoreInfo() {
+        var moreInfo = document.getElementById("more-info");
+        if (moreInfo.style.display === "none") {
+          moreInfo.style.display = "block";
+        } else {
+          moreInfo.style.display = "none";
+        }
+      }
+
+      function toggleFacts() {
+        var moreFacts = document.getElementById("more-facts");
+        if (moreFacts.style.display === "none") {
+          moreFacts.style.display = "block";
+        } else {
+          moreFacts.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>

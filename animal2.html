@@ -7,6 +7,7 @@
     <title>Animal 2 - Bengal Tiger</title>
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
       <div class="container">
         <a href="index.html" class="logo">My Zoo</a>
@@ -20,64 +21,187 @@
       </div>
     </nav>
 
+    <!-- Header Section -->
     <header>
       <h1>Bengal Tiger</h1>
     </header>
 
+    <!-- Main Content -->
     <main>
+      <!-- Introduction Section -->
       <section>
-        <img
-          src="images/tiger.jpg"
-          alt="Bengal Tiger"
-          style="width: 300px; height: auto"
-        />
+        <img src="images/tiger.jpg" alt="Bengal Tiger" class="feature-image" />
         <p>
-          The Bengal tiger is the most numerous tiger subspecies and is found
-          primarily in India. These magnificent predators are known for their
-          striking orange coat with black stripes, powerful build, and keen
+          The Bengal tiger is the most numerous tiger subspecies and is
+          primarily found in India. These powerful predators are known for their
+          striking orange coat with black stripes, strong build, and keen
           hunting abilities.
         </p>
+        <button class="btn" onclick="showMoreInfo()">
+          Learn More About Tigers
+        </button>
+        <div id="more-info" style="display: none">
+          <p>
+            Bengal tigers are solitary animals, and they usually hunt alone at
+            night. They have a unique pattern of stripes on their fur, which
+            helps them blend into their surroundings and provides camouflage
+            while hunting.
+          </p>
+        </div>
       </section>
 
+      <!-- Interesting Facts Section -->
       <section>
         <h2>Interesting Facts:</h2>
         <ul>
           <li>
             Bengal tigers are the largest wild cats in the world, reaching up to
-            10 feet in length.
+            10 feet in length and weighing up to 600 pounds.
           </li>
           <li>
-            They are excellent swimmers and often cool off in water to escape
-            the heat.
+            They have an impressive ability to leap distances of up to 10
+            meters.
           </li>
           <li>
-            Bengal tigers are solitary animals and maintain large territories to
-            ensure ample food supply.
+            Bengal tigers have a unique set of stripes, which are like
+            fingerprints—no two tigers have the same pattern.
+          </li>
+          <li>They can consume up to 40 kilograms of meat in one sitting!</li>
+        </ul>
+        <button class="btn" onclick="toggleFacts()">Show More Facts</button>
+        <ul id="more-facts" style="display: none">
+          <li>
+            Tigers are excellent swimmers and have been known to swim across
+            rivers and lakes.
+          </li>
+          <li>
+            They use their whiskers to detect the movements and position of
+            prey, even in the dark.
+          </li>
+          <li>
+            Bengal tigers can roar as far as 3 kilometers away to communicate
+            with other tigers.
           </li>
         </ul>
       </section>
 
+      <!-- Habitat Section with Additional Image -->
       <section>
         <h2>Habitat:</h2>
+        <img
+          src="images/tiger-habitat.jpg"
+          alt="Tiger Habitat"
+          class="content-image"
+        />
         <p>
-          Bengal tigers inhabit diverse habitats, including tropical
-          rainforests, grasslands, and mangrove swamps. They require dense
-          vegetation and access to water to thrive.
+          Bengal tigers inhabit diverse environments such as tropical
+          rainforests, grasslands, and mangrove swamps. They prefer areas with
+          dense vegetation and water sources, where they can easily stalk their
+          prey.
         </p>
+        <a
+          href="https://en.wikipedia.org/wiki/Bengal_tiger"
+          target="_blank"
+          class="btn"
+          >Read More on Wikipedia</a
+        >
       </section>
 
+      <!-- Diet Section with Table -->
       <section>
-        <h2>Behavior:</h2>
+        <h2>Diet</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Prey</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Deer</td>
+              <td>Primary prey, including sambar and chital deer.</td>
+            </tr>
+            <tr>
+              <td>Wild Boar</td>
+              <td>Often hunted when other prey is scarce.</td>
+            </tr>
+            <tr>
+              <td>Buffalo</td>
+              <td>Occasionally hunted, especially by larger males.</td>
+            </tr>
+            <tr>
+              <td>Fish</td>
+              <td>Sometimes caught in rivers and streams.</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Conservation Section -->
+      <section>
+        <h2>Conservation Efforts</h2>
         <p>
-          Bengal tigers are primarily nocturnal and rely on stealth and strength
-          to hunt prey. They use their powerful jaws and sharp teeth to take
-          down animals much larger than themselves.
+          The Bengal tiger is classified as endangered due to habitat loss and
+          poaching. Conservation organizations are working to protect these
+          magnificent cats and their habitats.
         </p>
+        <ul>
+          <li>
+            <a
+              href="https://www.worldwildlife.org/species/tiger"
+              target="_blank"
+              >World Wildlife Fund</a
+            >
+          </li>
+          <li>
+            <a href="https://www.tiger.org/" target="_blank"
+              >Tiger Conservation Foundation</a
+            >
+          </li>
+          <li>
+            <a href="https://www.tigersintheforest.com/" target="_blank"
+              >Save Tigers Now</a
+            >
+          </li>
+        </ul>
+      </section>
+
+      <!-- Image Gallery Section -->
+      <section>
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+          <img src="images/tiger1.jpeg" alt="Tiger 1" class="gallery-image" />
+          <img src="images/tiger2.jpeg" alt="Tiger 2" class="gallery-image" />
+          <img src="images/tiger3.jpeg" alt="Tiger 3" class="gallery-image" />
+        </div>
       </section>
     </main>
 
+    <!-- Footer -->
     <footer>
       <a href="index.html">Back to Home</a>
     </footer>
+
+    <!-- JavaScript for Interactive Elements -->
+    <script>
+      function showMoreInfo() {
+        var moreInfo = document.getElementById("more-info");
+        if (moreInfo.style.display === "none") {
+          moreInfo.style.display = "block";
+        } else {
+          moreInfo.style.display = "none";
+        }
+      }
+
+      function toggleFacts() {
+        var moreFacts = document.getElementById("more-facts");
+        if (moreFacts.style.display === "none") {
+          moreFacts.style.display = "block";
+        } else {
+          moreFacts.style.display = "none";
+        }
+      }
+    </script>
   </body>
 </html>
